@@ -1,15 +1,26 @@
 import Greeting from "./greeting"
-import Task from "./task"
+import Tasklist from "./tasklist"
+import NewTask from "./newtask"
+import { useState } from "react"
 
-function app()
-{
+function App()
+{const [task,setTask]= useState([]);
+    function add(title)
+    {
+         setTask(newtask=>[...newtask,title]);
+    }
+    function remove(index)
+    {
+        setTask(newtask=>newtask.filter((_,i)=>i!==index))
+    }
     return(
         
             <div>
             <Greeting></Greeting>
-            <Task></Task>
+            <Tasklist tasks={task} onRemove={remove}></Tasklist>
+            <NewTask onadd={add}></NewTask>
             </div>
         
     )
 }
-export default app;
+export default App;

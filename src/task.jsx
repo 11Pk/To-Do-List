@@ -1,12 +1,12 @@
-import Title from "./taskTitle"
-import Status from "./taskStatus";
 
-function task()
+function Task(props)
 {
     return(
-        <div >
-         <Status></Status><Title></Title>
+
+        <div>
+           <input type="checkbox" checked={props.status} onChange={()=>{props.remove(props.index)}}></input>
+            <input type="text" placeholder="Enter the title of the task." value={props.title} readOnly></input>
         </div>
     )
 }
-export default task
+export default Task
