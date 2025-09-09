@@ -1,0 +1,81 @@
+/* Base layout */
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    background:#f5f6f8;
+    color:#1f2937;
+}
+
+#root>div{ /* app wrapper */
+    max-width:920px;
+    margin:48px auto;
+    padding:0 16px;
+}
+
+/* Header */
+h1{
+    margin:0 0 6px 0;
+    font-weight:700;
+    font-size:28px;
+}
+h2{
+    margin:0 0 24px 0;
+    font-weight:500;
+    font-size:14px;
+    color:#6b7280;
+}
+
+/* Task list item */
+.TASK{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#ffffff;
+    height:56px;
+    border-radius:12px;
+    padding:0 16px;
+    box-shadow:0 1px 0 rgba(17,24,39,.06), 0 8px 24px rgba(17,24,39,.05);
+    margin-bottom:12px;
+}
+
+.TASK input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#10b981;
+}
+
+.Title{
+    flex:1;
+    font-size:15px;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#111827;
+}
+
+/* New task form should align with list styling */
+form{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#ffffff;
+    height:56px;
+    border-radius:12px;
+    padding:0 16px;
+    box-shadow:0 1px 0 rgba(17,24,39,.06), 0 8px 24px rgba(17,24,39,.05);
+    margin-top:16px;
+}
+
+form input[type="text"]{
+    flex:1;
+    font-size:15px;
+    border:none;
+    outline:none;
+}
+
+form input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#10b981;
+}
